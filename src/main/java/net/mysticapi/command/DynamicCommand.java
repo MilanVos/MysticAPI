@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 import java.lang.reflect.Method;
 import java.util.List;
 
-class DynamicCommand extends org.bukkit.command.Command {
+public class DynamicCommand extends org.bukkit.command.Command {
 
     private final CommandBase instance;
     private final Command commandAnnotation;
@@ -16,7 +16,7 @@ class DynamicCommand extends org.bukkit.command.Command {
     private final boolean defaultPlayerOnly;
     private final List<SubCommandEntry> subCommands;
 
-    DynamicCommand(String name, CommandBase instance, Command commandAnnotation,
+    public DynamicCommand(String name, CommandBase instance, Command commandAnnotation,
                    Method defaultMethod, boolean defaultPlayerOnly,
                    List<SubCommandEntry> subCommands) {
         super(name, commandAnnotation.description(), commandAnnotation.usage(),
@@ -106,6 +106,6 @@ class DynamicCommand extends org.bukkit.command.Command {
         }
     }
 
-    record SubCommandEntry(String name, String[] aliases, String permission, boolean playerOnly, Method method) {
+    public record SubCommandEntry(String name, String[] aliases, String permission, boolean playerOnly, Method method) {
     }
 }
