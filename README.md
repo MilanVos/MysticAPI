@@ -18,7 +18,7 @@ Voeg JitPack toe als repository en de dependency aan je `pom.xml`:
     <dependency>
         <groupId>com.github.MilanVos</groupId>
         <artifactId>MysticAPI</artifactId>
-        <version>v1.1</version>
+        <version>v1.2</version>
     </dependency>
 </dependencies>
 ```
